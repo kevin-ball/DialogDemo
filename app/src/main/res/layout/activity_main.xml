@@ -24,11 +24,25 @@
         android:text="@string/QuitButtonText" />
 
     <Button
-        android:id="@+id/btnPickADate"
+        android:id="@+id/btnPickADateDefault"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="@string/DateButtonText" />
+        android:text="@string/DateButtonTextDefault" />
+
+    <Button
+        android:id="@+id/btnPickADateMyCalendar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/DateButtonTextMyCalendar" />
+
+    <Button
+        android:id="@+id/btnPickADateMySpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/DateButtonTextMySpinner" />
 
     <Button
         android:id="@+id/btnPickADateSpinnerDark"
@@ -43,6 +57,13 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="@string/DateButtonTextSpinnerLight" />
+
+    <Button
+        android:id="@+id/btnPickADateBuilder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Pick A Date (Builder)" />
 
     <TextView
         android:id="@+id/tvDatePicked"

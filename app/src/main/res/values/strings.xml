@@ -4,9 +4,11 @@
     <string name="QuitButtonText">QUIT</string>
     <string name="alerttDialogTitle">Quit Dialog</string>
     <string name="alerttDialogMessage">Do you really want to quit?</string>
-    <string name="DateButtonText">Pick a Date (Calendar)</string>
-    <string name="DateButtonTextSpinnerLight">Pick a Date (Spinner Light)</string>
-    <string name="DateButtonTextSpinnerDark">Pick a Date (Spinner Dark)</string>
+    <string name="DateButtonTextDefault">Pick a Date</string>
+    <string name="DateButtonTextMyCalendar">Pick a Date (My Calendar Style)</string>
+    <string name="DateButtonTextMySpinner">Pick a Date (My Spinner Style)</string>
+    <string name="DateButtonTextSpinnerLight">Pick a Date (Holo Spinner Light)</string>
+    <string name="DateButtonTextSpinnerDark">Pick a Date (Holo Spinner Dark)</string>
     <string name="dateAlerttDialogTitle">Date Picker Dialog</string>
     <string name="dateAlerttDialogMessage">Pick a Date</string>
 </resources>
