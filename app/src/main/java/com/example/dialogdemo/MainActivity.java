@@ -43,8 +43,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 builder = new AlertDialog.Builder(MainActivity.this);
-                builder.setTitle(getResources().getString(R.string.alerttDialogTitle));
-                builder.setMessage(getResources().getString(R.string.alerttDialogMessage));
+                builder.setTitle(getResources().getString(R.string.alertDialogTitle));
+                builder.setMessage(getResources().getString(R.string.alertDialogMessage));
                 builder.setCancelable(false);
                 builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
                     @Override
@@ -97,8 +97,8 @@ public class MainActivity extends AppCompatActivity {
                         tvDate.setText((month + 1) +"/" + day + "/" + year);
                     }
                 }, year, month, day);
-                myDateDialog.setTitle(getResources().getString(R.string.dateAlerttDialogTitle));
-                myDateDialog.setMessage(getResources().getString(R.string.dateAlerttDialogMessage));
+                myDateDialog.setTitle(getResources().getString(R.string.dateAlertDialogTitle));
+                myDateDialog.setMessage(getResources().getString(R.string.dateAlertDialogMessage));
                 myDateDialog.show();
             }
         });
@@ -128,8 +128,8 @@ public class MainActivity extends AppCompatActivity {
                         tvDate.setText((month + 1) +"/" + day + "/" + year);
                     }
                 }, year, month, day);
-                myDateDialog.setTitle(getResources().getString(R.string.dateAlerttDialogTitle));
-                myDateDialog.setMessage(getResources().getString(R.string.dateAlerttDialogMessage));
+                myDateDialog.setTitle(getResources().getString(R.string.dateAlertDialogTitle));
+                myDateDialog.setMessage(getResources().getString(R.string.dateAlertDialogMessage));
                 myDateDialog.show();
             }
         });
@@ -159,8 +159,8 @@ public class MainActivity extends AppCompatActivity {
                         tvDate.setText((month + 1) +"/" + day + "/" + year);
                     }
                 }, year, month, day);
-                myDateDialog.setTitle(getResources().getString(R.string.dateAlerttDialogTitle));
-                myDateDialog.setMessage(getResources().getString(R.string.dateAlerttDialogMessage));
+                myDateDialog.setTitle(getResources().getString(R.string.dateAlertDialogTitle));
+                myDateDialog.setMessage(getResources().getString(R.string.dateAlertDialogMessage));
                 myDateDialog.show();
             }
         });
@@ -190,8 +190,8 @@ public class MainActivity extends AppCompatActivity {
                         tvDate.setText((month + 1) +"/" + day + "/" + year);
                     }
                 }, year, month, day);
-                myDateDialog.setTitle(getResources().getString(R.string.dateAlerttDialogTitle));
-                myDateDialog.setMessage(getResources().getString(R.string.dateAlerttDialogMessage));
+                myDateDialog.setTitle(getResources().getString(R.string.dateAlertDialogTitle));
+                myDateDialog.setMessage(getResources().getString(R.string.dateAlertDialogMessage));
                 myDateDialog.show();
             }
         });
@@ -221,8 +221,8 @@ public class MainActivity extends AppCompatActivity {
                         tvDate.setText((month + 1) +"/" + day + "/" + year);
                     }
                 }, year, month, day);
-                myDateDialog.setTitle(getResources().getString(R.string.dateAlerttDialogTitle));
-                myDateDialog.setMessage(getResources().getString(R.string.dateAlerttDialogMessage));
+                myDateDialog.setTitle(getResources().getString(R.string.dateAlertDialogTitle));
+                myDateDialog.setMessage(getResources().getString(R.string.dateAlertDialogMessage));
                 myDateDialog.show();
             }
         });
@@ -246,8 +246,8 @@ public class MainActivity extends AppCompatActivity {
 
                 dateBuilder = new DatePickerDialog.Builder(MainActivity.this);
                 dateBuilder.setView(datePicker);
-                dateBuilder.setTitle(getResources().getString(R.string.dateAlerttDialogTitle));
-                dateBuilder.setMessage(R.string.dateAlerttDialogMessage);
+                dateBuilder.setTitle(getResources().getString(R.string.dateAlertDialogTitle));
+                dateBuilder.setMessage(R.string.dateAlertDialogMessage);
                 dateBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {

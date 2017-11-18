@@ -18,6 +18,7 @@
 
     <Button
         android:id="@+id/btnQuit"
+        style="@style/btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -25,6 +26,7 @@
 
     <Button
         android:id="@+id/btnPickADateDefault"
+        style="@style/btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -32,20 +34,23 @@
 
     <Button
         android:id="@+id/btnPickADateMyCalendar"
+        style="@style/btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_gravity="center_horizontal"
         android:text="@string/DateButtonTextMyCalendar" />
 
     <Button
         android:id="@+id/btnPickADateMySpinner"
+        style="@style/btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_gravity="center_horizontal"
         android:text="@string/DateButtonTextMySpinner" />
 
     <Button
         android:id="@+id/btnPickADateSpinnerDark"
+        style="@style/btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -53,6 +58,7 @@
 
     <Button
         android:id="@+id/btnPickADateSpinnerLight"
+        style="@style/btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -60,10 +66,11 @@
 
     <Button
         android:id="@+id/btnPickADateBuilder"
+        style="@style/btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Pick A Date (Builder)" />
+        android:text="Pick a Date (Builder)" />
 
     <TextView
         android:id="@+id/tvDatePicked"

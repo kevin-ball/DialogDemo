@@ -10,6 +10,13 @@
         <!-- <item name="android:datePickerDialogTheme">@style/MyCalendarDatePickerStyle</item> -->
     </style>
 
+    <style name="btn">
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
     <style name="MySpinnerDatePickerStyle" parent="android:Theme.Material.Dialog">
         <item name="android:datePickerStyle">@style/MySpinnerDatePicker</item>
     </style>
