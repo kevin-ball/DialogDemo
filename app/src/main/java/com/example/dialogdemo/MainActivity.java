@@ -17,6 +17,9 @@ import android.widget.TextView;
 
 import java.util.Calendar;
 
+/**
+ *  Extended Dialog Demo - show various Styles of DatePickerDialog
+ */
 public class MainActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
     Button btnQuit;
 
@@ -62,40 +65,6 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
             }
         });
 
-/*
-        // Date Picker Dialog created by DatePickerDialog.Builder using my R.layout.date_picker_calendar
-        Button btnPickDateBuilder = (Button) findViewById(R.id.btnPickADateBuilder);
-        tvDate = (TextView) findViewById(R.id.tvDatePicked);
-        btnPickDateBuilder.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                tvDate.setText("");
-
-                LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                View dpview = inflater.inflate(R.layout.date_picker_calendar, null, false);
-                //View dpview = inflater.inflate(R.layout.date_picker_spinner, null, false);
-                onClickDateBuilder(dpview);
-            }
-        });
-
-
-        // Date Picker Dialog created by DatePickerDialog.Builder using my R.layout.date_picker_spinner
-        Button btnPickDateBuilderSpinner = (Button) findViewById(R.id.btnPickADateBuilderSpinner);
-        tvDate = (TextView) findViewById(R.id.tvDatePicked);
-        btnPickDateBuilderSpinner.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                tvDate.setText("");
-
-                LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                //View dpview = inflater.inflate(R.layout.date_picker_calendar, null, false);
-                View dpview = inflater.inflate(R.layout.date_picker_spinner, null, false);
-
-                onClickDateBuilder(dpview);
-            }
-        });
-
-*/
         // Setup Spinner to pick DatePicker options
         Spinner dropdown = (Spinner)findViewById(R.id.spinner);
         String[] items = new String[]{
@@ -108,70 +77,6 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, items);
         dropdown.setAdapter(adapter);
     }
-
-    /*
-    public void onClickDateBuilder(View dpview) {
-        final DatePicker datePicker = dpview.findViewById(R.id.myDatePicker);
-
-        DatePickerDialog.Builder dateBuilder = new DatePickerDialog.Builder(MainActivity.this);
-        dateBuilder.setView(datePicker);
-        dateBuilder.setTitle(getResources().getString(R.string.dateAlertDialogTitle));
-        dateBuilder.setMessage(R.string.dateAlertDialogMessage);
-        dateBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int id) {
-                month = datePicker.getMonth();
-                day = datePicker.getDayOfMonth();
-                year = datePicker.getYear();
-                tvDate.setText((month + 1) + "/" + day + "/" + year);
-                dialog.cancel();
-            }
-        });
-        dateBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int i) {
-                dialog.cancel();
-            }
-        });
-
-        AlertDialog myDateDialog = dateBuilder.create();
-        myDateDialog.show();
-    }
-    */
-
-    /*
-    public void showDatePickerDialog(View v) {
-        Calendar calendar = Calendar.getInstance();
-        int year = calendar.get(Calendar.YEAR);
-        int month = calendar.get(Calendar.MONTH);
-        int day = calendar.get(Calendar.DAY_OF_MONTH);
-        DatePickerDialog myDateDialog = null;
-        switch (v.getId()) {
-            case R.id.btnPickADateDefault:  // Date Picker Dialog created with App Default Style
-                myDateDialog = new DatePickerDialog(this, MainActivity.this, year, month, day);
-                break;
-            case R.id.btnPickADateMyCalendar: // Date Picker Dialog created with my R.style.MyCalendarDatePickerStyle
-                myDateDialog = new DatePickerDialog(this, R.style.MyCalendarDatePickerStyle,MainActivity.this, year, month, day);
-                break;
-            case R.id.btnPickADateMySpinner: // Date Picker Dialog created with my R.style.MySpinnerDatePickerStyle
-                myDateDialog = new DatePickerDialog(this, R.style.MySpinnerDatePickerStyle,MainActivity.this, year, month, day);
-                break;
-            case R.id.btnPickADateSpinnerDark: // Date Picker Dialog created with Android's android.R.style.Theme_Holo_Dialog
-                myDateDialog = new DatePickerDialog(this, android.R.style.Theme_Holo_Dialog,MainActivity.this, year, month, day);
-                break;
-            case R.id.btnPickADateSpinnerLight: // Date Picker Dialog created with Android's android.R.style.Theme_Holo_Light_Dialog
-                myDateDialog = new DatePickerDialog(this, android.R.style.Theme_Holo_Light_Dialog,MainActivity.this, year, month, day);
-                break;
-            default:
-                myDateDialog = new DatePickerDialog(this, MainActivity.this, year, month, day);
-                break;
-        }
-
-        myDateDialog.setTitle(getResources().getString(R.string.dateAlertDialogTitle));
-        myDateDialog.setMessage(getResources().getString(R.string.dateAlertDialogMessage));
-        myDateDialog.show();
-    }
-    */
 
     public void showDatePickerDialogSpinner(View v) {
         Calendar calendar = Calendar.getInstance();
@@ -211,6 +116,6 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
         year = i;
         month = i1;
         day = i2;
-        tvDate.setText((month + 1) +"/" + day + "/" + year);
+        tvDate.setText("Selected date is " + (month + 1) +"/" + day + "/" + year);
     }
 }

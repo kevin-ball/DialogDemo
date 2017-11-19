@@ -1,15 +1,17 @@
 <resources>
-    <string name="app_name">DialogDemo</string>
+    <string name="app_name">DialogDemoAppExtended</string>
     <string name="titleString">Dialog App Extended \nTeam Avengers: \nVictoria Larina, \nJunliu Zhang, \nKevin Ball</string>
     <string name="QuitButtonText">QUIT</string>
     <string name="alertDialogTitle">Quit Dialog</string>
     <string name="alertDialogMessage">Do you really want to quit?</string>
     <string name="dateAlertDialogTitle">Date Picker Dialog</string>
     <string name="dateAlertDialogMessage">Pick a Date</string>
+    <string name="dateSelected">Date you selected</string>
     <string name="DateButtonTextDefault">Pick a Date</string>
     <string name="DateButtonTextMyCalendar">Pick a Date (My Calendar Style)</string>
     <string name="DateButtonTextMySpinner">Pick a Date (My Spinner Style)</string>
     <string name="DateButtonTextSpinnerLight">Pick a Date (Holo Spinner Light)</string>
     <string name="DateButtonTextSpinnerDark">Pick a Date (Holo Spinner Dark)</string>
     <string name="DateButtonTextBuilder">Pick a Date (Builder)</string>
+    <string name="PickAStyle">Pick a Style</string>
 </resources>

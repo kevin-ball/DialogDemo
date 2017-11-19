@@ -9,12 +9,11 @@
 
     <TextView
         android:id="@+id/tvUITitle"
+        style="@style/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/titleString"
-        android:textAlignment="center"
-        android:textSize="24sp" />
+        android:layout_gravity="center_horizontal|center"
+        android:text="@string/titleString" />
 
     <Button
         android:id="@+id/btnQuit"
@@ -23,6 +22,24 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="@string/QuitButtonText" />
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/PickAStyle" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/white"
+        android:popupBackground="?attr/colorButtonNormal"
+        android:textSize="30sp"
+        android:visibility="visible" />
 
     <Button
         android:id="@+id/btnPickADateSpinner"
@@ -33,18 +50,12 @@
         android:text="@string/DateButtonTextDefault"
         android:onClick="showDatePickerDialogSpinner"/>
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:spinnerMode="dropdown" />
-
     <TextView
         android:id="@+id/tvDatePicked"
+        style="@style/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:textSize="24sp" />
+        android:text="@string/dateSelected" />
 
 </LinearLayout>
