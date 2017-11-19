@@ -30,7 +30,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="@string/DateButtonTextDefault" />
+        android:text="@string/DateButtonTextDefault"
+        android:onClick="showDatePickerDialog"/>
 
     <Button
         android:id="@+id/btnPickADateMyCalendar"
@@ -38,7 +39,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="@string/DateButtonTextMyCalendar" />
+        android:text="@string/DateButtonTextMyCalendar"
+        android:onClick="showDatePickerDialog" />
 
     <Button
         android:id="@+id/btnPickADateMySpinner"
@@ -46,7 +48,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="@string/DateButtonTextMySpinner" />
+        android:text="@string/DateButtonTextMySpinner"
+        android:onClick="showDatePickerDialog" />
 
     <Button
         android:id="@+id/btnPickADateSpinnerDark"
@@ -54,7 +57,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="@string/DateButtonTextSpinnerDark" />
+        android:text="@string/DateButtonTextSpinnerDark"
+        android:onClick="showDatePickerDialog" />
 
     <Button
         android:id="@+id/btnPickADateSpinnerLight"
@@ -62,7 +66,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="@string/DateButtonTextSpinnerLight" />
+        android:text="@string/DateButtonTextSpinnerLight"
+        android:onClick="showDatePickerDialog" />
 
     <Button
         android:id="@+id/btnPickADateBuilder"
@@ -70,7 +75,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Pick a Date (Builder)" />
+        android:text="@string/pick_a_date_builder"
+        android:onClick="showDatePickerDialog" />
 
     <TextView
         android:id="@+id/tvDatePicked"
