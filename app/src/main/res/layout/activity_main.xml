@@ -25,58 +25,20 @@
         android:text="@string/QuitButtonText" />
 
     <Button
-        android:id="@+id/btnPickADateDefault"
+        android:id="@+id/btnPickADateSpinner"
         style="@style/btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="@string/DateButtonTextDefault"
-        android:onClick="showDatePickerDialog"/>
+        android:onClick="showDatePickerDialogSpinner"/>
 
-    <Button
-        android:id="@+id/btnPickADateMyCalendar"
-        style="@style/btn"
+    <Spinner
+        android:id="@+id/spinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="@string/DateButtonTextMyCalendar"
-        android:onClick="showDatePickerDialog" />
-
-    <Button
-        android:id="@+id/btnPickADateMySpinner"
-        style="@style/btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/DateButtonTextMySpinner"
-        android:onClick="showDatePickerDialog" />
-
-    <Button
-        android:id="@+id/btnPickADateSpinnerDark"
-        style="@style/btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/DateButtonTextSpinnerDark"
-        android:onClick="showDatePickerDialog" />
-
-    <Button
-        android:id="@+id/btnPickADateSpinnerLight"
-        style="@style/btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/DateButtonTextSpinnerLight"
-        android:onClick="showDatePickerDialog" />
-
-    <Button
-        android:id="@+id/btnPickADateBuilder"
-        style="@style/btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/pick_a_date_builder"
-        android:onClick="showDatePickerDialog" />
+        android:spinnerMode="dropdown" />
 
     <TextView
         android:id="@+id/tvDatePicked"

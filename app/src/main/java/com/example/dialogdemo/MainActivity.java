@@ -9,25 +9,19 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
     Button btnQuit;
-    Button btnPickDateDefault;
-    Button btnPickDateMyCalenderStyle;
-    Button btnPickDateMySpinnerStyle;
-    Button btnPickDateSpinnerDark;
-    Button btnPickDateSpinnerLight;
-    Button btnPickDateBuilder;
-
 
     TextView tvDate;
     AlertDialog.Builder builder;
-    DatePickerDialog.Builder dateBuilder;
     static final String TAG="DialogDemo";
     int day, month, year;
     @Override
@@ -68,13 +62,58 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
             }
         });
 
-        LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View dpview = inflater.inflate(R.layout.date_picker_calendar, null, false);
-        //View dpview = inflater.inflate(R.layout.date_picker_spinner, null, false);
+/*
+        // Date Picker Dialog created by DatePickerDialog.Builder using my R.layout.date_picker_calendar
+        Button btnPickDateBuilder = (Button) findViewById(R.id.btnPickADateBuilder);
+        tvDate = (TextView) findViewById(R.id.tvDatePicked);
+        btnPickDateBuilder.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                tvDate.setText("");
 
+                LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                View dpview = inflater.inflate(R.layout.date_picker_calendar, null, false);
+                //View dpview = inflater.inflate(R.layout.date_picker_spinner, null, false);
+                onClickDateBuilder(dpview);
+            }
+        });
+
+
+        // Date Picker Dialog created by DatePickerDialog.Builder using my R.layout.date_picker_spinner
+        Button btnPickDateBuilderSpinner = (Button) findViewById(R.id.btnPickADateBuilderSpinner);
+        tvDate = (TextView) findViewById(R.id.tvDatePicked);
+        btnPickDateBuilderSpinner.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                tvDate.setText("");
+
+                LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                //View dpview = inflater.inflate(R.layout.date_picker_calendar, null, false);
+                View dpview = inflater.inflate(R.layout.date_picker_spinner, null, false);
+
+                onClickDateBuilder(dpview);
+            }
+        });
+
+*/
+        // Setup Spinner to pick DatePicker options
+        Spinner dropdown = (Spinner)findViewById(R.id.spinner);
+        String[] items = new String[]{
+                "Default App Style",
+                "My Calendar Style",
+                "My Spinner Style",
+                "Holo Spinner Dark",
+                "Holo Spinner Light"
+        };
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, items);
+        dropdown.setAdapter(adapter);
+    }
+
+    /*
+    public void onClickDateBuilder(View dpview) {
         final DatePicker datePicker = dpview.findViewById(R.id.myDatePicker);
 
-        dateBuilder = new DatePickerDialog.Builder(MainActivity.this);
+        DatePickerDialog.Builder dateBuilder = new DatePickerDialog.Builder(MainActivity.this);
         dateBuilder.setView(datePicker);
         dateBuilder.setTitle(getResources().getString(R.string.dateAlertDialogTitle));
         dateBuilder.setMessage(R.string.dateAlertDialogMessage);
@@ -94,9 +133,13 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
                 dialog.cancel();
             }
         });
+
+        AlertDialog myDateDialog = dateBuilder.create();
+        myDateDialog.show();
     }
+    */
 
-
+    /*
     public void showDatePickerDialog(View v) {
         Calendar calendar = Calendar.getInstance();
         int year = calendar.get(Calendar.YEAR);
@@ -119,21 +162,48 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
             case R.id.btnPickADateSpinnerLight: // Date Picker Dialog created with Android's android.R.style.Theme_Holo_Light_Dialog
                 myDateDialog = new DatePickerDialog(this, android.R.style.Theme_Holo_Light_Dialog,MainActivity.this, year, month, day);
                 break;
-            case R.id.btnPickADateBuilder: // Date Picker Dialog created by DatePickerDialog.Builder using my R.layout.date_picker_calendar
-                AlertDialog myDateAlertDialog = dateBuilder.create();
-                myDateAlertDialog.show();
+            default:
+                myDateDialog = new DatePickerDialog(this, MainActivity.this, year, month, day);
+                break;
+        }
+
+        myDateDialog.setTitle(getResources().getString(R.string.dateAlertDialogTitle));
+        myDateDialog.setMessage(getResources().getString(R.string.dateAlertDialogMessage));
+        myDateDialog.show();
+    }
+    */
+
+    public void showDatePickerDialogSpinner(View v) {
+        Calendar calendar = Calendar.getInstance();
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH);
+        int day = calendar.get(Calendar.DAY_OF_MONTH);
+        DatePickerDialog myDateDialog = null;
+        Spinner dropdown = (Spinner)findViewById(R.id.spinner);
+        switch (dropdown.getSelectedItemPosition()) {
+            case 0:  // Date Picker Dialog created with App Default Style
+                myDateDialog = new DatePickerDialog(this, MainActivity.this, year, month, day);
+                break;
+            case 1: // Date Picker Dialog created with my R.style.MyCalendarDatePickerStyle
+                myDateDialog = new DatePickerDialog(this, R.style.MyCalendarDatePickerStyle,MainActivity.this, year, month, day);
+                break;
+            case 2: // Date Picker Dialog created with my R.style.MySpinnerDatePickerStyle
+                myDateDialog = new DatePickerDialog(this, R.style.MySpinnerDatePickerStyle,MainActivity.this, year, month, day);
+                break;
+            case 3: // Date Picker Dialog created with Android's android.R.style.Theme_Holo_Dialog
+                myDateDialog = new DatePickerDialog(this, android.R.style.Theme_Holo_Dialog,MainActivity.this, year, month, day);
+                break;
+            case 4: // Date Picker Dialog created with Android's android.R.style.Theme_Holo_Light_Dialog
+                myDateDialog = new DatePickerDialog(this, android.R.style.Theme_Holo_Light_Dialog,MainActivity.this, year, month, day);
                 break;
             default:
                 myDateDialog = new DatePickerDialog(this, MainActivity.this, year, month, day);
                 break;
         }
 
-        if (v.getId() != R.id.btnPickADateBuilder) {
-            myDateDialog.setTitle(getResources().getString(R.string.dateAlertDialogTitle));
-            myDateDialog.setMessage(getResources().getString(R.string.dateAlertDialogMessage));
-            myDateDialog.show();
-        }
-
+        myDateDialog.setTitle(getResources().getString(R.string.dateAlertDialogTitle));
+        myDateDialog.setMessage(getResources().getString(R.string.dateAlertDialogMessage));
+        myDateDialog.show();
     }
 
     @Override
