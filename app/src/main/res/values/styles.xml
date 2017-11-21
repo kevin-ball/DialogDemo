@@ -10,20 +10,21 @@
         <!-- <item name="android:datePickerDialogTheme">@style/MyCalendarDatePickerStyle</item> -->
     </style>
 
+    <color name="MyBGColorLightBlue">#E2E7F5</color>
     <style name="myTheme" parent="Theme.AppCompat.Light">
+        <item name="android:background">@color/MyBGColorLightBlue</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:orientation">vertical</item>
-        <item name="android:layout_margin">10dp</item>
     </style>
 
-    <color name="MyBGColorGrey">#7B7D7D</color>
     <style name="text" parent="@android:style/TextAppearance.Large">
         <item name="android:textSize">24sp</item>
-        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_gravity">center_horizontal|center</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/MyBGColorGrey</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:layout_margin">10dp</item>
     </style>
 
     <style name="btn">
@@ -31,6 +32,18 @@
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    <color name="MyBGColorWhite">#FFFFFF</color>
+    <style name="spinner">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/MyBGColorWhite</item>
+        <item name="android:popupBackground">@color/MyBGColorWhite</item>
+        <item name="android:textSize">30sp</item>
+
     </style>
 
     <style name="MySpinnerDatePickerStyle" parent="android:Theme.Material.Dialog">
